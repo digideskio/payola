@@ -29,10 +29,10 @@ Gem::Specification.new do |gem|
   gem.require_paths     = ['lib']
 
   gem.add_dependency              'stripe',         '~> 1.10'
-  gem.add_dependency              'human_error',    '~> 0.0.1'
+  gem.add_dependency              'human_error',    '~> 1.4'
 
   gem.add_development_dependency  'rspec',          '~> 3.0.0beta'
-  gem.add_development_dependency  'rspectacular',   '~> 0.22.1'
+  gem.add_development_dependency  'rspectacular',   '~> 0.34.0'
   gem.add_development_dependency  'money',          '~> 6.0'
   gem.add_development_dependency  'vcr',            '~> 2.8'
   gem.add_development_dependency  'webmock',        '< 1.16'
