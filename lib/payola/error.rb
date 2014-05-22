@@ -2,6 +2,6 @@ require 'human_error/error'
 
 module  Payola
 class   Error < RuntimeError
-  extend HumanError::Error
+  include HumanError::Error
 end
 end
