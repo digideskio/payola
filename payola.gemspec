@@ -32,8 +32,8 @@ Gem::Specification.new do |gem|
   gem.add_dependency              'human_error',    '~> 1.7'
 
   gem.add_development_dependency  'rspec',          '~> 3.0.0beta'
-  gem.add_development_dependency  'rspectacular',   '~> 0.34.0'
+  gem.add_development_dependency  'rspectacular',   '~> 0.38.0'
   gem.add_development_dependency  'money',          '~> 6.0'
-  gem.add_development_dependency  'vcr',            '~> 2.8'
+  gem.add_development_dependency  'vcr',            '~> 2.8.0'
   gem.add_development_dependency  'webmock',        '< 1.16'
 end
