@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    payola (0.0.4)
+    payola (1.0.0)
       human_error (~> 1.11)
       stripe (~> 1.10)
 
