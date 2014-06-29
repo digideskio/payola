@@ -28,6 +28,7 @@ class   StripePaymentGateway
 
   def apply_subscription
     update_subscription_plan
+    update_subscription_payment_token
 
     {
       status:                   subscription.status,
@@ -50,6 +51,12 @@ class   StripePaymentGateway
     end
   rescue Stripe::InvalidRequestError => e
     raise Payola::Errors::PaymentGatewayRequestError.wrap(e)
+  end
+
+  def update_subscription_payment_token
+    subscription.save(card: payment_token)
+  rescue Stripe::InvalidRequestError => e
+    raise Payola::Errors::PaymentGatewayRequestError.wrap(e) unless e.message.match 'cannot use a Stripe token more than once'
   end
 
   def last_four_of_credit_card

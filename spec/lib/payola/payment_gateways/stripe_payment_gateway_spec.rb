@@ -144,6 +144,35 @@ describe    StripePaymentGateway, :stripe, :vcr do
     expect(subscription[:status]).to                   eql   'active'
     expect(subscription[:last_four_of_credit_card]).to eql   nil
   end
+
+  it 'can update a subscription with a new payment token' do
+    customer     = Stripe::Customer.create
+    plan         = Stripe::Plan.create      id:             'my other existing test plan id',
+                                            amount:         200,
+                                            currency:       'USD',
+                                            interval:       'week',
+                                            name:           'what you talkin bout'
+    existing_subscription = customer.subscriptions.create(
+                                            plan: plan.id,
+                                            card: credit_card_token)
+
+    new_credit_card_token = Payola::Factories::StripePaymentToken.create( card: {
+                              number:     '4012888888881881',
+                              exp_month:  3,
+                              exp_year:   2015,
+                              cvc:        '314' })
+
+    subscription = StripePaymentGateway.apply_subscription \
+                          subscription_id: "#{customer.id}:#{existing_subscription.id}",
+                          plan_id:         'my other existing plan id',
+                          amount:          Money.new(200, 'USD'),
+                          interval:        'week',
+                          interval_count:  1,
+                          plan_name:       'what you talking bout',
+                          payment_token:   new_credit_card_token
+
+    expect(subscription[:last_four_of_credit_card]).to eql   '1881'
+  end
 end
 end
 end
