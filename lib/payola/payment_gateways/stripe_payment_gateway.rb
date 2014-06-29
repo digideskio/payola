@@ -33,7 +33,7 @@ class   StripePaymentGateway
       status:                   subscription.status,
       plan:                     subscription.plan[:id],
       subscription_id:          "#{subscription.customer}:#{subscription.id}",
-      last_four_of_credit_card: customer_default_card.last4,
+      last_four_of_credit_card: last_four_of_credit_card,
     }
   end
 
@@ -50,6 +50,10 @@ class   StripePaymentGateway
     end
   rescue Stripe::InvalidRequestError => e
     raise Payola::Errors::PaymentGatewayRequestError.wrap(e)
+  end
+
+  def last_four_of_credit_card
+    customer_default_card.last4 unless plan.amount.zero?
   end
 
   def customer_default_card

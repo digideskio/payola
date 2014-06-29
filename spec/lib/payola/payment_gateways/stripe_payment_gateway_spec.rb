@@ -129,6 +129,21 @@ describe    StripePaymentGateway, :stripe, :vcr do
     raise_error(Payola::Errors::PaymentGatewayRequestError).
       with_message("RuntimeError: error creating customer")
   end
+
+  it 'allows a free subscription to be created without a previous paid subscription' do
+    subscription = StripePaymentGateway.apply_subscription \
+                      subscription_id: nil,
+                      plan_id:         'my test plan id',
+                      amount:          Money.new(0, 'USD'),
+                      interval:        'month',
+                      interval_count:  1,
+                      plan_name:       'my test plan name'
+
+    expect(subscription[:plan]).to                     eql   'my test plan id'
+    expect(subscription[:subscription_id]).to          match /\Acus_[A-Za-z0-9]{14}\:sub_[A-Za-z0-9]{14}\z/
+    expect(subscription[:status]).to                   eql   'active'
+    expect(subscription[:last_four_of_credit_card]).to eql   nil
+  end
 end
 end
 end
