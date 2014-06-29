@@ -8,8 +8,8 @@ module      Payola
 module      PaymentGateways
 describe    StripePaymentGateway, :stripe, :vcr do
   before(:each) do
-    Payola.config.payment_gateway_api_key = 'sk_test_ouP1BhLytHhz96J1VuNPmiJZ'
-    Stripe.api_key                        = 'sk_test_ouP1BhLytHhz96J1VuNPmiJZ'
+    Payola.config.payment_gateway_api_key = 'sk_test_AyJNzC2ZSmR8u13Ja33D8Gey'
+    Stripe.api_key                        = 'sk_test_AyJNzC2ZSmR8u13Ja33D8Gey'
   end
 
   let(:credit_card_token) do
