@@ -35,7 +35,7 @@ GEM
     rspec-mocks (3.0.3)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.3)
-    rspectacular (0.48.0)
+    rspectacular (0.49.0)
       fuubar (~> 2.0.beta)
       rspec (~> 3.0.beta)
     ruby-progressbar (1.5.1)
