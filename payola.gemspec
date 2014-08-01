@@ -28,13 +28,13 @@ Gem::Specification.new do |gem|
   gem.test_files        = Dir['{test,spec,features}/**/*']
   gem.require_paths     = ['lib']
 
-  gem.add_dependency              'stripe',         '~> 1.10'
-  gem.add_dependency              'human_error',    '~> 1.11'
+  gem.add_dependency              'stripe',                     '~> 1.10'
+  gem.add_dependency              'human_error',                '~> 1.11'
 
-  gem.add_development_dependency  'rspec',          '~> 3.0'
-  gem.add_development_dependency  'rspectacular',   '~> 0.48'
-  gem.add_development_dependency  'money',          '~> 6.0'
-  gem.add_development_dependency  'vcr',            '~> 2.8.0'
-  gem.add_development_dependency  'webmock',        '< 1.16'
+  gem.add_development_dependency  'rspec',                      '~> 3.0'
+  gem.add_development_dependency  'rspectacular',               '~> 0.48'
+  gem.add_development_dependency  'money',                      '~> 6.0'
+  gem.add_development_dependency  'vcr',                        '~> 2.8.0'
+  gem.add_development_dependency  'webmock',                    '< 1.16'
   gem.add_development_dependency  'codeclimate-test-reporter',  '~> 0.3.0'
 end
