@@ -9,7 +9,7 @@ module  Payola
   end
 
   def self.config
-    @@configuration ||= Configuration.new
+    @configuration ||= Configuration.new
   end
 
   def self.configure

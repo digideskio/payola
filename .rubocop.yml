@@ -6,6 +6,9 @@ inherit_from:
 Style/IndentationWidth:
   Enabled: false
 
+Metrics/LineLength:
+  Enabled: false
+
 Style/EmptyLinesAroundBlockBody:
   Exclude:
     - 'spec/**/*.rb'
