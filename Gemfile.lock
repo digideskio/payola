@@ -12,12 +12,9 @@ GEM
     chamber (2.8.0)
       hashie (~> 3.3)
       thor (~> 0.19.1)
-    codeclimate-test-reporter (0.3.0)
-      simplecov (>= 0.7.1, < 1.0.0)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
-    docile (1.1.5)
     fuubar (2.0.0.rc1)
       rspec (~> 3.0.rc1)
       ruby-progressbar (~> 1.4)
@@ -28,7 +25,6 @@ GEM
     mime-types (1.25.1)
     money (6.1.1)
       i18n (~> 0.6.4)
-    multi_json (1.10.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rspec (3.0.0)
@@ -47,12 +43,7 @@ GEM
       fuubar (~> 2.0.beta)
       rspec (~> 3.0.beta)
     ruby-progressbar (1.5.1)
-    safe_yaml (1.0.3)
-    simplecov (0.9.0)
-      docile (~> 1.1.0)
-      multi_json
-      simplecov-html (~> 0.8.0)
-    simplecov-html (0.8.0)
+    safe_yaml (1.0.4)
     stripe (1.14.0)
       json (~> 1.8.1)
       mime-types (~> 1.25)
@@ -68,7 +59,6 @@ PLATFORMS
 
 DEPENDENCIES
   chamber
-  codeclimate-test-reporter (~> 0.3.0)
   money (~> 6.0)
   payola!
   rspec (~> 3.0)
