@@ -47,12 +47,16 @@ Style/AndOr:
   Enabled:                       true
   EnforcedStyle:                 'always'
 
+Style/AutoResourceCleanup:
+  Enabled:                       true
+
 Style/BarePercentLiterals:
   Enabled:                       true
   EnforcedStyle:                 'percent_q'
 
-Style/Blocks:
+Style/BlockDelimiters:
   Enabled:                       true
+  EnforcedStyle:                 'line_count_based'
   Exclude:
     - 'app/controllers/**/*.rb'
 
@@ -73,6 +77,9 @@ Style/ClassCheck:
   Enabled:                       true
   EnforcedStyle:                 'is_a?'
 
+Style/ClosingParenthesisIndentation:
+  Enabled:                       true
+
 Style/CollectionMethods:
   Enabled:                       true
   PreferredMethods:
@@ -81,6 +88,11 @@ Style/CollectionMethods:
     inject:                      'reduce'
     detect:                      'find'
     find_all:                    'select'
+
+Style/CommandLiteral:
+  Enabled:                       true
+  EnforcedStyle:                 'backticks'
+  AllowInnerBackticks:           false
 
 Style/CommentAnnotation:
   Enabled:                       true
@@ -103,6 +115,7 @@ Style/ElseAlignment:
 
 Style/EmptyElse:
   Enabled:                       true
+  EnforcedStyle:                 'both'
 
 Style/EmptyLiteral:
   Enabled:                       true
@@ -248,7 +261,8 @@ Style/RedundantReturn:
 
 Style/RegexpLiteral:
   Enabled:                       true
-  MaxSlashes:                    0
+  EnforcedStyle:                 'slashes'
+  AllowInnerSlashes:             false
 
 Style/Semicolon:
   Enabled:                       true
@@ -283,6 +297,12 @@ Style/SpaceAroundEqualsInParameterDefault:
   Enabled:                       true
   EnforcedStyle:                 'space'
 
+Style/SpaceAroundOperators:
+  Enabled:                       true
+  MultiSpaceAllowedForOperators:
+    - '='
+    - '=>'
+
 Style/SpaceBeforeBlockBraces:
   Enabled:                       true
   EnforcedStyle:                 'space'
@@ -312,6 +332,9 @@ Style/StructInheritance:
   Enabled:                       true
 
 Style/SymbolArray:
+  Enabled:                       true
+
+Style/SymbolLiteral:
   Enabled:                       true
 
 Style/SymbolProc:
@@ -413,5 +436,27 @@ Lint/EndAlignment:
   Enabled:                       true
   AlignWith:                     'keyword'
 
+Lint/NonLocalExitFromIterator:
+  Enabled:                       true
+
 Lint/SpaceBeforeFirstArg:
+  Enabled:                       true
+
+################################################################################
+#                                PERFORMANCE
+################################################################################
+
+Performance/ReverseEach:
+  Enabled:                       true
+
+Performance/Detect:
+  Enabled:                       true
+
+Performance/Size:
+  Enabled:                       true
+
+Performance/Sample:
+  Enabled:                       true
+
+Performance/FlatMap:
   Enabled:                       true
