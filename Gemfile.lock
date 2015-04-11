@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     payola (1.0.2)
-      human_error (~> 1.11)
+      human_error (~> 2.0)
       stripe (~> 1.10)
 
 GEM
@@ -21,7 +21,7 @@ GEM
     hashie (3.4.0)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
-    human_error (1.13.3)
+    human_error (2.0.0)
     i18n (0.6.9)
     json (1.8.1)
     mime-types (1.25.1)
