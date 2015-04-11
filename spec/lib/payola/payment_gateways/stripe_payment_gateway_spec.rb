@@ -19,7 +19,7 @@ describe    StripePaymentGateway, :stripe, :vcr do
     Payola::Factories::StripePaymentToken.create(card: {
                                                    number:    '4242424242424242',
                                                    exp_month: 3,
-                                                   exp_year:  2015,
+                                                   exp_year:  2020,
                                                    cvc:       '314' })
   end
 
@@ -164,7 +164,7 @@ describe    StripePaymentGateway, :stripe, :vcr do
     new_credit_card_token = Payola::Factories::StripePaymentToken.create(card: {
                                                                            number:    '4012888888881881',
                                                                            exp_month: 3,
-                                                                           exp_year:  2015,
+                                                                           exp_year:  2020,
                                                                            cvc:       '314' })
 
     subscription = StripePaymentGateway.apply_subscription \
