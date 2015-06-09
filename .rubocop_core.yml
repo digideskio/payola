@@ -110,6 +110,9 @@ Style/DotPosition:
   Enabled:                       true
   EnforcedStyle:                 'trailing'
 
+Style/EachWithObjectArgument:
+  Enabled:                       true
+
 Style/ElseAlignment:
   Enabled:                       true
 
@@ -219,6 +222,9 @@ Style/NumericLiterals:
   Enabled:                       true
   MinDigits:                     5
 
+Style/ParallelAssignment:
+  Enabled:                       true
+
 Style/ParenthesesAroundCondition:
   Enabled:                       true
   AllowSafeAssignment:           true
@@ -302,6 +308,7 @@ Style/SpaceAroundOperators:
   MultiSpaceAllowedForOperators:
     - '='
     - '=>'
+    - '||='
 
 Style/SpaceBeforeBlockBraces:
   Enabled:                       true
@@ -319,6 +326,9 @@ Style/SpaceInsideHashLiteralBraces:
   EnforcedStyleForEmptyBraces:   'no_space'
 
 Style/SpaceInsideRangeLiteral:
+  Enabled:                       true
+
+Style/SpaceInsideStringInterpolation:
   Enabled:                       true
 
 Style/StringLiterals:
@@ -350,6 +360,9 @@ Style/TrailingComma:
   Enabled:                       true
   EnforcedStyleForMultiline:     'comma'
 
+Style/TrailingUnderscoreVariable:
+  Enabled:                       true
+
 Style/TrivialAccessors:
   Enabled:                       true
 
@@ -378,6 +391,13 @@ Metrics/BlockNesting:
   Max:                           3
 
 Metrics/ClassLength:
+  Enabled:                       true
+  CountComments:                 false
+  Max:                           200
+  Exclude:
+    - 'spec/**/*_spec.rb'
+
+Metrics/ModuleLength:
   Enabled:                       true
   CountComments:                 false
   Max:                           200
@@ -436,27 +456,36 @@ Lint/EndAlignment:
   Enabled:                       true
   AlignWith:                     'keyword'
 
+Lint/NestedMethodDefinition:
+  Enabled:                       true
+
 Lint/NonLocalExitFromIterator:
   Enabled:                       true
 
 Lint/SpaceBeforeFirstArg:
   Enabled:                       true
 
+Lint/UnneededDisable:
+  Enabled:                       true
+
 ################################################################################
 #                                PERFORMANCE
 ################################################################################
 
-Performance/ReverseEach:
+Performance/Count:
   Enabled:                       true
 
 Performance/Detect:
+  Enabled:                       true
+
+Performance/FlatMap:
+  Enabled:                       true
+
+Performance/ReverseEach:
   Enabled:                       true
 
 Performance/Size:
   Enabled:                       true
 
 Performance/Sample:
-  Enabled:                       true
-
-Performance/FlatMap:
   Enabled:                       true
