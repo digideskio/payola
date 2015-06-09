@@ -110,9 +110,6 @@ Style/DotPosition:
   Enabled:                       true
   EnforcedStyle:                 'trailing'
 
-Style/EachWithObjectArgument:
-  Enabled:                       true
-
 Style/ElseAlignment:
   Enabled:                       true
 
@@ -450,6 +447,9 @@ Lint/DefEndAlignment:
   AlignWith:                     'start_of_line'
 
 Lint/DuplicateMethods:
+  Enabled:                       true
+
+Lint/EachWithObjectArgument:
   Enabled:                       true
 
 Lint/EndAlignment:
