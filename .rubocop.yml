@@ -6,9 +6,8 @@ inherit_from:
 Style/IndentationWidth:
   Enabled: false
 
-Metrics/LineLength:
+Style/ExtraSpacing:
   Enabled: false
 
-Style/EmptyLinesAroundBlockBody:
-  Exclude:
-    - 'spec/**/*.rb'
+Metrics/LineLength:
+  Enabled: false

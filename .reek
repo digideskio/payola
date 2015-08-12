@@ -1,0 +1,130 @@
+###
+# Directory-Based Configurations
+#
+'app/controllers':
+  NestedIterators:
+    max_allowed_nesting:    2
+
+###
+# Global Configurations
+#
+Attribute:
+  enabled:                  false
+  exclude:
+    - 'spec/factories/*.rb'
+
+BooleanParameter:
+  enabled:                  true
+
+ClassVariable:
+  enabled:                  true
+
+ControlParameter:
+  enabled:                  true
+
+DataClump:
+  enabled:                  true
+  max_copies:               2
+  min_clump_size:           2
+
+DuplicateMethodCall:
+  enabled:                  true
+  max_calls:                2
+
+FeatureEnvy:
+  enabled:                  true
+
+IrresponsibleModule:
+  enabled:                  false
+  exclude:
+    - 'app/helpers'
+    - 'app/controllers'
+
+LongParameterList:
+  enabled:                  false
+  max_params:               3
+  overrides:
+    initialize:
+      max_params:           5
+
+LongYieldList:
+  enabled:                  false
+  max_params:               3
+
+ModuleInitialize:
+  enabled:                  false
+
+NestedIterators:
+  enabled:                  true
+  max_allowed_nesting:      1
+  ignore_iterators:         []
+
+NilCheck:
+  enabled:                  true
+
+PrimaDonnaMethod:
+  enabled:                  true
+
+RepeatedConditional:
+  enabled:                  true
+  max_ifs:                  2
+
+TooManyInstanceVariables:
+  enabled:                  true
+  max_instance_variables:   9
+
+TooManyMethods:
+  enabled:                  true
+  max_methods:              25
+
+TooManyStatements:
+  enabled:                  false
+  max_statements:           5
+
+UncommunicativeMethodName:
+  enabled: true
+  exclude: []
+  reject:
+    - !ruby/regexp /^[a-z]$/
+    - !ruby/regexp /[0-9]$/
+    - !ruby/regexp /[A-Z]/
+  accept: []
+
+UncommunicativeModuleName:
+  enabled: true
+  exclude: []
+  reject:
+    - !ruby/regexp /^.$/
+    - !ruby/regexp /[0-9]$/
+  accept:
+    - Inline::C
+    - !ruby/regexp /^V\d+$/
+
+UncommunicativeParameterName:
+  enabled: true
+  exclude: []
+  reject:
+    - !ruby/regexp /^.$/
+    - !ruby/regexp /[0-9]$/
+    - !ruby/regexp /[A-Z]/
+    - !ruby/regexp /^_/
+  accept: []
+
+UncommunicativeVariableName:
+  enabled: true
+  exclude: []
+  reject:
+    - !ruby/regexp /^.$/
+    - !ruby/regexp /[0-9]$/
+    - !ruby/regexp /[A-Z]/
+  accept:
+    - _
+
+UnusedParameters:
+  enabled:                  false
+
+UtilityFunction:
+  enabled:                  true
+  max_helper_calls:         1
+  exclude:
+    - 'app/helpers'
