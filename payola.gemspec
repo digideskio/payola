@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
   gem.test_files        = Dir['{test,spec,features}/**/*']
 
   gem.add_dependency              'stripe',        '~> 1.10'
-  gem.add_dependency              'human_error',   '~> 2.0'
+  gem.add_dependency              'human_error',   '~> 3.0'
 
   gem.add_development_dependency  'rspec',         '~> 3.0'
   gem.add_development_dependency  'rspectacular',  '~> 0.48'
